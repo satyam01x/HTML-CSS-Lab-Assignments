@@ -1,0 +1,17 @@
+/* Name: SATYAM | Roll Number: 2410303438 | Assignment: 13 | Teacher: MR. YASHRAJ SINGH | University: Invertis University, Bareilly | Semester: 5TH SEMESTER */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+.card {
+  padding: 25px;
+  background: #e8eef7;
+  border: 1px solid #1d3557;
+  border-radius: 10px;
+  min-width: 130px;
+  text-align: center;
+}

@@ -1,0 +1,86 @@
+BCS554 - GIT COMMAND GUIDE
+Student: SATYAM | Roll Number: 2410303438
+Teacher: MR. YASHRAJ SINGH | University: Invertis University, Bareilly | Semester: 5TH SEMESTER
+
+ASSIGNMENT 1 - STARTING A GIT REPOSITORY
+
+TASK 1: Create folder, initialize Git, configure local identity, and verify.
+Run in VS Code terminal / PowerShell:
+
+mkdir html-lab
+cd html-lab
+git init
+git config --local user.name "Satyam"
+git config --local user.email "CONFIRM_EMAIL_ADDRESS_FIRST@example.com"
+git config user.name
+git config user.email
+
+Replace CONFIRM_EMAIL_ADDRESS_FIRST@example.com with your GitHub email.
+Take terminal screenshot: A01-task1-git-config.png
+
+TASK 2: Create index.html and make the first commit.
+Create index.html in html-lab with:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Lab</title>
+</head>
+<body>
+  <h1>Welcome to HTML Lab</h1>
+</body>
+</html>
+
+Then run:
+
+git status
+git add index.html
+git commit -m "Add home page"
+
+Take terminal screenshot: A01-task2-first-commit.png
+
+TASK 3: Add a second heading, commit, and view the log.
+Add this below the h1 in index.html:
+  <h2>Next Lab Meeting</h2>
+
+Then run:
+
+git status
+git add index.html
+git commit -m "Add next meeting heading"
+git log --oneline
+
+Take terminal screenshot: A01-task3-second-commit.png
+
+ASSIGNMENT 2 - PUSHING AND CLONING A REPOSITORY
+
+TASK 1: Create a bare repository and add it as origin.
+Run from inside html-lab:
+
+git init --bare ../html-remote
+git remote add origin ../html-remote
+git remote -v
+
+Take terminal screenshot: A02-task1-remote.png
+
+TASK 2: Push your commits.
+To make the branch name match the lab's main example, run:
+
+git branch -M main
+git push origin main
+
+If you keep your branch named master instead, run: git push origin master
+
+Take terminal screenshot: A02-task2-push.png
+
+TASK 3: Clone the remote repository.
+Run:
+
+cd ..
+git clone html-remote html-copy
+cd html-copy
+git log --oneline
+
+The same commits should appear in the cloned repository.
+Take terminal screenshot: A02-task3-clone.png

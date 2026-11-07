@@ -1,0 +1,1 @@
+Run RUN_SCREENSHOT_CAPTURE.bat from the project root to automatically create Assignment-03 through Assignment-15 screenshot folders. Capture Assignments 1-2 terminal output manually after running the Git commands.
